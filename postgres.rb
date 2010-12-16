@@ -1,6 +1,6 @@
 dep "postgres9" do
   met? {
-    which { psql }
+    which "psql"
   }
   
   meet {
