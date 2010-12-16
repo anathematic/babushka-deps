@@ -8,3 +8,9 @@ dep "postgres.src" do
   }
   
 end
+
+dep "build-essential" do
+  installs {
+    via :yum, "build-essential"
+  }
+end
