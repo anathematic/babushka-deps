@@ -10,7 +10,7 @@ dep "postgres.src" do
 end
 
 dep "build-essential" do
-  installs {
-    via :yum, "build-essential"
+  setup {
+    install { shell "sudo yum groupinstall \"Development Tools\"" }
   }
 end
