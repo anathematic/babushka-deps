@@ -13,6 +13,10 @@ dep 'build tools' do
   requires {
     on :osx, 'xcode tools'
     on :snow_leopard, 'llvm in path'
-    on :linux { shell "sudo yum groupinstall \"Development Tools\"" }
+    on :linux, 'development-tools'
   }
+end
+
+ext 'development-tools' do
+  shell "sudo yum groupinstall \"Development Tools\""
 end
