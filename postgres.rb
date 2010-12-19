@@ -8,15 +8,3 @@ dep "postgres.src" do
   }
   
 end
-
-dep 'development-tools' do
-  shell "yum groupinstall \"Development Tools\""
-end
-
-dep 'build tools' do
-  requires {
-    on :osx, 'xcode tools'
-    on :snow_leopard, 'llvm in path'
-    on :linux, 'development-tools'
-  }
-end
