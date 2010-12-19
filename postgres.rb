@@ -15,5 +15,5 @@ end
 
 dep 'development-tools' do
   met? { true }
-  shell { "echo \"foo\"" }
+  shell "echo foo"
 end
