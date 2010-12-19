@@ -8,3 +8,12 @@ dep "postgres.src" do
   }
   
 end
+
+dep 'build-essential' do
+  requires { 'development-tools' }
+  met? { true }
+end
+
+dep 'development-tools' do
+  shell { echo "foo" }
+end
