@@ -9,8 +9,10 @@ dep "postgres.src" do
   
 end
 
-dep "build-essential" do
-  setup {
-    install { shell "sudo yum groupinstall \"Development Tools\"" }
+dep 'build tools' do
+  requires {
+    on :osx, 'xcode tools'
+    on :snow_leopard, 'llvm in path'
+    on :linux { shell "sudo yum groupinstall \"Development Tools\"" }
   }
 end
