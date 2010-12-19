@@ -14,5 +14,5 @@ dep 'build-essential' do
 end
 
 dep 'development-tools' do
-  shell { echo "foo" }
+  shell { "echo \"foo\"" }
 end
