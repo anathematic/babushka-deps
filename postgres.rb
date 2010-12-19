@@ -17,6 +17,6 @@ dep 'build tools' do
   }
 end
 
-ext 'development-tools' do
+dep 'development-tools' do
   shell "sudo yum groupinstall \"Development Tools\""
 end
