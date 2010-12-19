@@ -9,8 +9,8 @@ dep "postgres.src" do
 end
 
 dep 'build-essential' do
+  requires 'development-tools'
   met? { true }
-  meet { 'development-tools' }
 end
 
 dep 'development-tools' do
