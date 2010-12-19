@@ -10,9 +10,10 @@ end
 
 dep 'build-essential' do
   met? { true }
-  requires { 'development-tools' }
+  meet { 'development-tools' }
 end
 
 dep 'development-tools' do
+  met? { true }
   shell { "echo \"foo\"" }
 end
